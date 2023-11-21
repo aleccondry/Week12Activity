@@ -12,7 +12,7 @@ import javascript
 predicate isTest(Function test) {
     exists(CallExpr describe, CallExpr it |
         describe.getCalleeName() = "describe" and
-        it.getCalleeName() == "it" and
+        it.getCalleeName() = "it" and
         it.getParent*() = describe and 
         test = it.getArgument(1)
     )
